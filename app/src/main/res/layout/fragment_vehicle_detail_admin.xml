@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llContainerVehicleDetailAdmin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_10">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llFrontVehicleDetailAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_14"
+                android:layout_marginBottom="@dimen/margin_14"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Ảnh giấy đăng ký xe mặt trước"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_14"
+                    android:gravity="center"
+                    app:cardCornerRadius="@dimen/corner_radius_10">
+
+                    <ImageView
+                        android:id="@+id/ivFrontVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="#0D02075D"
+                        android:scaleType="fitCenter"
+                        android:visibility="visible" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBackVehicleDetailAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_14"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Ảnh giấy đăng ký xe mặt sau"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_14"
+                    android:gravity="center"
+                    app:cardCornerRadius="@dimen/corner_radius_10">
+
+                    <ImageView
+                        android:id="@+id/ivBackVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="#0D02075D"
+                        android:scaleType="fitCenter"
+                        android:visibility="visible" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Biển số xe"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtLicensePlateVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập biển số xe chỉ bao gồm số và chữ"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Số giấy chứng nhận"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtCetificateNumberVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập số giấy chứng nhận"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Tên chủ xe"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtNameVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập tên của bạn"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Địa chỉ"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtAddressVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập địa chỉ của bạn"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Nhãn hiệu"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtBrandVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập nhãn hiệu xe như: HONDA"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Số loại"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtTypeBrandVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập số loại của xe như: LEAD"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Số máy"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtEngineNumberVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập số máy"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Số khung"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtChassisNumberVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập số khung"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Màu sơn"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtColorVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Nhập màu sơn xe của bạn"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Ngày đăng ký"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <EditText
+                        android:id="@+id/edtRegisterDayVehicleDetailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edit_text_white"
+                        android:enabled="false"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:hint="Chọn ngày đăng ký xe"
+                        android:inputType="none"
+                        android:maxLines="2"
+                        android:padding="@dimen/padding_10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_14"
+                    android:layout_marginBottom="@dimen/margin_14"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:gravity="start|center_vertical"
+                        android:text="Ngày hết hạn"
+                        android:textSize="@dimen/font_size_16" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edtExprireDayVehicleDetailAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edit_text_white"
+                android:enabled="false"
+                android:fontFamily="@font/source_sans_pro"
+                android:hint="Chọn ngày hết hạn"
+                android:inputType="none"
+                android:maxLines="2"
+                android:padding="@dimen/padding_10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/btnConfirmVehicleDetailAdmin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_weight="6"
+                    android:background="@color/light_green"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:text="Xác nhận đăng ký xe"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnRefuseVehicleDetailAdmin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_weight="4"
+                    android:background="@color/light_red"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:text="Từ chối phê duyệt"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnRollBackVehicleDetailAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                android:background="#0C15AA"
+                android:text="Hoàn tác yêu cầu"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:padding="@dimen/padding_4"
+                        android:text="CAMERA DÃY 1"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llRefreshParking"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvRefreshParking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/source_sans_pro"
+                        android:gravity="end"
+                        android:padding="@dimen/padding_4"
+                        android:text="Làm mới"
+                        android:textColor="#141DB8"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius_5">
+
+                <ImageView
+                    android:id="@+id/ivPhotoCarInParking"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/img_car_in"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/corner_radius_5">
+
+                <ImageView
+                    android:id="@+id/ivPhotoCarOutParking"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="@drawable/img_car_out"
+                    android:scaleType="centerCrop" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10">
+
+            <TextView
+                android:id="@+id/tvStateMessageParking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text="Hóa đơn gửi xe cho xe chưa đăng ký"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/llButtonCarIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="75dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCarInParking"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/image_search" />
+
+                <TextView
+                    android:id="@+id/tvCarInParking"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:textColor="@color/icon_color"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:text="Tìm kiếm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llButtonCarOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llButtonCarIn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="150dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCarOutParking"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/qr_scan" />
+
+                <TextView
+                    android:id="@+id/tvCarOutParking"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:textColor="@color/icon_color"
+                    android:gravity="center"
+                    android:text="Quét mã"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStateMessageParking"
+                android:layout_marginRight="60dp"
+                android:paddingBottom="20dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cdvContainerParking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="0.0px"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="@dimen/corner_radius_5"
+                        card_view:cardElevation="5dp"
+                        card_view:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:id="@+id/llBlankCarParking"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivLBlankCarParking"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/blank_car" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llContainerParking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="6">
+
+                                <ImageView
+                                    android:id="@+id/ivQrcodeParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/qr_code" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:text="Thời gian xe vào"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+                                    android:id="@+id/edtTimeInParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:background="@drawable/rounded_edit_text"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:inputType="none"
+                                    android:padding="@dimen/padding_6"
+                                    android:text="11:28 - 09/11/2023"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Giá tiền"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+
+                                    android:id="@+id/edtPriceParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/rounded_edit_text"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:inputType="none"
+                                    android:padding="@dimen/padding_6"
+                                    android:text="3,000 VND"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Biển số"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+
+                                    android:id="@+id/edtLicensePlateParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/rounded_edit_text"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:inputType="none"
+                                    android:padding="@dimen/padding_6"
+                                    android:text="516-99999"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Loại xe"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+                                    android:id="@+id/edtVehicleTypeParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:background="@drawable/rounded_edit_text"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:inputType="none"
+                                    android:padding="@dimen/padding_6"
+                                    android:text="Xe hơi"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Họ tên"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+                                    android:id="@+id/edtNameParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:background="@drawable/rounded_edit_text"
+                                    android:enabled="false"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:inputType="none"
+                                    android:padding="@dimen/padding_6"
+                                    android:text="Nguyễn Văn Mạnh"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal"
+                                android:weightSum="10">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Hình thức thanh toán"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <LinearLayout
+                                    android:id="@+id/llPaymentMethodParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:background="@drawable/rounded_edit_text_white"
+                                    android:gravity="center"
+                                    android:weightSum="5">
+
+                                    <EditText
+                                        android:id="@+id/edtPaymentMethodParking"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="4"
+                                        android:background="@android:color/transparent"
+                                        android:enabled="false"
+                                        android:fontFamily="@font/source_sans_pro"
+                                        android:padding="@dimen/padding_6"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_14" />
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/down_arrow" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:gravity="start|center_vertical"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Hình thức gửi xe"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <LinearLayout
+                                    android:id="@+id/llInvoiceTypeParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:background="@drawable/rounded_edit_text_white"
+                                    android:gravity="center"
+                                    android:weightSum="5">
+
+                                    <EditText
+                                        android:id="@+id/edtInvoiceTypeParking"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="4"
+                                        android:background="@android:color/transparent"
+                                        android:enabled="false"
+                                        android:fontFamily="@font/source_sans_pro"
+                                        android:padding="@dimen/padding_6"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/font_size_14" />
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/down_arrow" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llParkingInvoiceCarinParking"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:layout_marginBottom="@dimen/margin_10"
+                                android:gravity="start"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Ảnh xe vào"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/ivParkingInvoiceCarInParking"
+                                        android:layout_width="120dp"
+                                        android:layout_height="120dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:layout_marginBottom="@dimen/margin_20"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/source_sans_pro_semibold"
+                                    android:gravity="start|center_vertical"
+                                    android:text="Ghi chú"
+                                    android:textSize="@dimen/font_size_14" />
+
+                                <EditText
+                                    android:id="@+id/edtNoteParking"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:background="@drawable/rounded_edit_text_white"
+                                    android:fontFamily="@font/source_sans_pro"
+                                    android:hint="Không có thông tin ghi chú"
+                                    android:inputType="text"
+                                    android:maxLines="3"
+                                    android:padding="@dimen/padding_6"
+                                    android:textSize="@dimen/font_size_14" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

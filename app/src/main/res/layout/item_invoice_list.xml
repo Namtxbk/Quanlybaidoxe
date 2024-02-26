@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/llContainerItemInvoiceList"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvLicensePlateInvoiceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text="89L1 - 38851"
+                android:textSize="@dimen/font_size_18" />
+
+            <TextView
+                android:id="@+id/tvStatusInvoiceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="@font/source_sans_pro"
+                android:gravity="end|center_vertical"
+                android:text="Đang gửi"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_6"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Giờ vào:"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/tvTimeInInvoiceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="11:59 - 12/10/2023"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_6"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Giá tiền:"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/tvPriceInvoiceList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="10,000 VND"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

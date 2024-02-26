@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/invoice_menu"
+        android:id="@+id/myinvoiceFragment"
+        android:title=""/>
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/debt_menu"
+        android:id="@+id/mydebtFragment"
+        android:title=""/>
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/notification_menu"
+        android:id="@+id/mynotificationFragment"
+        android:title=""/>
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/user_menu"
+        android:id="@+id/myprofileFragment"
+        android:title=""/>
+
+</menu>

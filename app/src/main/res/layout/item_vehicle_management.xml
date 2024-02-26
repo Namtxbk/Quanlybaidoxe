@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/llContainerItemInvoiceList"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvLicensePlateVehicleVehicleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text="89L1 - 38851"
+                android:textSize="@dimen/font_size_18" />
+
+            <TextView
+                android:id="@+id/tvStatusVehicleVehicleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:fontFamily="@font/source_sans_pro"
+                android:gravity="end|center_vertical"
+                android:text="Đang chờ phê duyệt"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_6"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Hãng xe:"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/tvBrandVehicleVehicleManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="HONDA"
+                android:textSize="@dimen/font_size_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_6"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Ngày tạo:"
+                android:textSize="@dimen/font_size_16" />
+
+            <TextView
+                android:id="@+id/tvCreateAtVehicleVehicleManagement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="28/12/2023"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/ivMoreVehicleManagement"
+                    android:background="@drawable/more"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

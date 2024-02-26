@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/hourTypeMenu"
+        android:title="Theo giờ"/>
+
+    <item
+        android:id="@+id/dayTypeMenu"
+        android:title="Theo ngày"/>
+    <item
+        android:id="@+id/monthTypeMenu"
+        android:title="Theo tháng"/>
+
+
+</menu>

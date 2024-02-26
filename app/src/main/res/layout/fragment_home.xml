@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_header_home"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+    <LinearLayout
+        android:id="@+id/llHeaderInvoiceList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_action_bar"
+        android:orientation="horizontal"
+        android:paddingTop="80dp"
+        android:paddingBottom="10dp"
+        android:weightSum="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/margin_6"
+                android:background="@drawable/search" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="8"
+            android:background="@drawable/search_edit_text"
+            android:fontFamily="@font/source_sans_pro"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/notification" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/v_container_home"
+        android:layout_marginTop="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/background_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/llInvoiceListHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llSetttingHome"
+        app:layout_constraintStart_toEndOf="@+id/llParkingHome"
+        app:layout_constraintTop_toTopOf="@id/v_container_home"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/ivInvoiceListHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/billing" />
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:gravity="center"
+            android:text="Hóa đơn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSetttingHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llSecurityCameraHome"
+        app:layout_constraintStart_toEndOf="@+id/llInvoiceListHome"
+        app:layout_constraintTop_toTopOf="@id/v_container_home"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/ivSettingHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/setting" />
+
+        <TextView
+
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:gravity="center"
+            android:text="Cấu hình" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSecurityCameraHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/llSetttingHome"
+        app:layout_constraintTop_toTopOf="@id/v_container_home"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/ivSecurityCameraHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/security_camera" />
+
+        <TextView
+
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:gravity="center"
+            android:text="Camera an ninh" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llParkingHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/llInvoiceListHome"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v_container_home"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageView
+            android:id="@+id/ivParkingHome"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/barrier" />
+
+        <TextView
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:fontFamily="@font/source_sans_pro_semibold"
+            android:gravity="center"
+            android:text="Gửi trả xe" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatisticInvoiceHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="Thống kê xe gửi"
+        android:textSize="@dimen/font_size_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barBottomHeaderHome" />
+
+    <TextView
+        android:id="@+id/tvShowMoreStatisticInvoiceHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/source_sans_pro_semibold"
+        android:text="Xem thêm"
+        android:textColor="#1720AE"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvStatisticInvoiceHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/tvStatisticInvoiceHome"
+        app:layout_constraintTop_toTopOf="@+id/barBottomHeaderHome" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="@dimen/margin_20"
+        app:cardCornerRadius="@dimen/corner_radius_10"
+        app:layout_constraintTop_toBottomOf="@id/tvStatisticInvoiceHome">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLabelNumberVehcileInHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Số xe vào "
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/tvNumberVehcileInHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text=": 5000"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelNumberVehcileInHome"
+                app:layout_constraintStart_toEndOf="@+id/barRightStatisticInvoiceHome" />
+
+            <TextView
+                android:id="@+id/tvLabelNumberVehicleOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Số xe ra"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelNumberVehcileInHome" />
+
+            <TextView
+                android:id="@+id/tvNumberVehicleOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text=": 5000"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelNumberVehicleOutHome"
+                app:layout_constraintStart_toEndOf="@+id/barRightStatisticInvoiceHome" />
+
+            <TextView
+                android:id="@+id/tvLabelRemainVehicleOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Còn lại"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabelNumberVehicleOutHome" />
+
+            <TextView
+                android:id="@+id/tvNumberRemainVehicleOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text=": 5000"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvLabelRemainVehicleOutHome"
+                app:layout_constraintStart_toEndOf="@+id/barRightStatisticInvoiceHome" />
+
+            <LinearLayout
+                android:id="@+id/llCarCountStatisticInvoiceHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/llMotobikeCountStatisticInvoiceHome"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/electric_car" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:text="2000 ô tô (chiếm 40%)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMotobikeCountStatisticInvoiceHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/llOtherCountStatisticInvoiceHome"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/llCarCountStatisticInvoiceHome">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/motorcycle" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:text="2000 xe máy (chiếm 40%)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOtherCountStatisticInvoiceHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/llMotobikeCountStatisticInvoiceHome">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/other" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:fontFamily="@font/source_sans_pro"
+                    android:gravity="center"
+                    android:text="2000 xe khác (chiếm 40%)" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFrequencyInHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text=": 2 xe/phút"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/tvLabelFrequencyInHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Tần suất vào"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvFrequencyInHome"
+                app:layout_constraintEnd_toStartOf="@+id/tvFrequencyInHome" />
+
+            <TextView
+                android:id="@+id/tvFrequencyOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:fontFamily="@font/source_sans_pro_semibold"
+                android:text=": 2 xe/phút"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFrequencyInHome" />
+
+            <TextView
+                android:id="@+id/tvLabelFrequencyOutHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Tần suất ra"
+                android:textSize="@dimen/font_size_16"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvFrequencyOutHome"
+                app:layout_constraintEnd_toStartOf="@+id/tvFrequencyOutHome" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barRightStatisticInvoiceHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="tvLabelNumberVehicleOutHome,tvLabelRemainVehicleOutHome,tvLabelNumberVehcileInHome" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barBottomHeaderHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="llSecurityCameraHome,llInvoiceListHome,llParkingHome,llSetttingHome" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

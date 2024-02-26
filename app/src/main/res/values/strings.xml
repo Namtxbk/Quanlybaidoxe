@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ParkingQR</string>
+    <string name="parking_fragment_name">Gửi trả xe</string>
+    <string name="scan_fragment_name">Quét QR</string>
+    <string name="home_fragment_name">Trang chủ</string>
+    <string name="invoice_list_fragment_name">Đơn gửi xe</string>
+    <string name="invoice_detail_fragment_name">Chi tiết hóa đơn</string>
+    <string name="login_fragment_name">Đăng nhập</string>
+    <string name="signup_fragment_name">Đăng ký</string>
+    <string name="mydebt_fragment_name">Hóa đơn chưa trả</string>
+    <string name="myinvoice_fragment_name">Hóa đơn gửi xe</string>
+    <string name="myprofile_fragment_name">Thông tin cá nhân</string>
+    <string name="mynotification_fragment_name">Thông báo</string>
+    <string name="register_vehicle_fragment_name">Đăng ký xe</string>
+    <string name="vehicle_registration_list_fragment_name">Danh sách đăng ký xe</string>
+    <string name="user_management_fragment_name">Quản lý tài khoản</string>
+    <string name="vehicle_management_fragment_name">Quản lý xe</string>
+</resources>

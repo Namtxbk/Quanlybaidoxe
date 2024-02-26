@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/cashMenu"
+        android:title="Tiền mặt"/>
+
+    <item
+        android:id="@+id/onlinePaymentMenu"
+        android:title="Chuyển khoản"/>
+
+
+</menu>
